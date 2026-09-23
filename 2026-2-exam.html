@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026-2학기 대학원 자격시험 신청 안내</title>
+<meta property="og:title" content="2026-2학기 대학원 자격시험 신청 안내">
+<meta property="og:description" content="2026-2학기 외국어시험·종합시험 신청 자격, 일정, 제출서류를 확인하고 신청 메일을 준비하세요.">
+<style>
+:root{
+  --bg-out:#e7e7ea;--bg:#fff;--card:#f5f5f7;--fg:#111;--fg2:#444;--fg3:#666;--fg4:#999;--line:#ddd;--line2:#eee;
+  --tab:#ffcd39;--tab-line:#e0ac00;--tab-fg:rgba(60,45,0,.62);--tab-on:#241a00;
+  --ink:#111;--ink-fg:#fff;--red:#c0392b;--red-bg:rgba(192,57,43,.08);--link:#3346c9;--input:#fafafa;
+  --notice:#fff6d6;--notice-fg:#6b5200;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg-out:#0d0d0f;--bg:#18181b;--card:#232327;--fg:#f2f2f3;--fg2:#c9c9ce;--fg3:#a3a3aa;--fg4:#7b7b83;--line:#34343a;--line2:#2b2b30;
+  --ink:#f2f2f3;--ink-fg:#111;--red:#ff7a6b;--red-bg:rgba(255,122,107,.12);--link:#8fa0ff;--input:#1f1f23;
+  --notice:#3a3113;--notice-fg:#ffd966;
+}}
+:root[data-theme="dark"]{
+  --bg-out:#0d0d0f;--bg:#18181b;--card:#232327;--fg:#f2f2f3;--fg2:#c9c9ce;--fg3:#a3a3aa;--fg4:#7b7b83;--line:#34343a;--line2:#2b2b30;
+  --ink:#f2f2f3;--ink-fg:#111;--red:#ff7a6b;--red-bg:rgba(255,122,107,.12);--link:#8fa0ff;--input:#1f1f23;
+  --notice:#3a3113;--notice-fg:#ffd966;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg-out);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;background:var(--bg-out);color:var(--fg);display:flex;justify-content:center}
+.app{width:100%;max-width:480px;min-height:100vh;background:var(--bg);box-shadow:0 0 18px rgba(0,0,0,.08)}
+
+.tabbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:grid;grid-template-columns:repeat(5,1fr);background:var(--bg);box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.tabbtn{padding:11px 2px 10px;text-align:center;font-size:14.5px;font-weight:600;color:rgba(35,35,55,.62);border:none;line-height:1.3;cursor:pointer;border-bottom:3px solid transparent;word-break:keep-all;font-family:inherit;transition:filter .15s}
+.tabbtn[data-tab="info"]{background:#ffecb3}
+.tabbtn[data-tab="lang"]{background:#cfe6ff}
+.tabbtn[data-tab="comp"]{background:#d4f1dc}
+.tabbtn[data-tab="apply"]{background:#fcd9e4}
+.tabbtn[data-tab="cal"]{background:#e3dafa}
+.tabbtn:not(.on){filter:saturate(.75) brightness(1.03)}
+.tabbtn.on{color:#1d1d2b;font-weight:800;border-bottom-color:#1d1d2b;filter:none}
+
+.pane{display:none;padding:.9rem .8rem 2rem}
+.pane.on{display:block}
+.hd-title{font-size:18px;font-weight:700;margin-bottom:3px}
+.hd-sub{font-size:13px;color:var(--fg3);margin-bottom:12px;line-height:1.5;word-break:keep-all}
+.hd-sec{font-size:14px;font-weight:700;margin:16px 0 8px}
+
+.pg-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px}
+.pg-card{background:var(--card);border-radius:10px;padding:10px 6px;text-align:center;min-width:0}
+.pg-name{font-size:11px;color:var(--fg3);line-height:1.3;margin-bottom:4px;word-break:keep-all}
+.pg-num{font-size:16px;font-weight:800;line-height:1.2;word-break:keep-all}
+.pg-num.dday{color:var(--red)}
+.pg-num.done{color:var(--fg4);font-size:13px}
+.pg-sub{font-size:10.5px;color:var(--fg4);margin-top:2px}
+
+.notice{background:var(--notice);color:var(--notice-fg);border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.6;margin-bottom:10px;word-break:keep-all}
+.info-card{background:var(--card);border-radius:10px;padding:12px 13px;margin-bottom:10px}
+.info-card .ic-title{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.info-card .ic-row{font-size:13px;color:var(--fg2);line-height:1.75;word-break:keep-all}
+.info-card .ic-row b{color:var(--fg);font-weight:600}
+.info-card.warn{background:var(--red-bg)}
+.info-card.warn .ic-title{color:var(--red)}
+
+.bdg{display:inline-block;font-size:10px;font-weight:700;border-radius:4px;padding:2px 6px;white-space:nowrap}
+.bdg-soon{background:rgba(255,160,75,.2);color:#c06d00}
+
+.sw-row{display:grid;gap:5px;margin-bottom:10px}
+.sw-row.c3{grid-template-columns:repeat(3,1fr)}
+.sw-row.c2{grid-template-columns:repeat(2,1fr)}
+.sw-btn{padding:9px 3px;text-align:center;font-size:11.5px;font-weight:600;color:var(--fg3);background:var(--card);border:none;border-radius:8px;cursor:pointer;word-break:keep-all;line-height:1.3;font-family:inherit}
+.sw-btn.on{background:var(--ink);color:var(--ink-fg)}
+
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:10px}
+table{border-collapse:collapse;font-size:12.5px;width:100%}
+th,td{border:.5px solid var(--line);padding:6px 4px;text-align:center;vertical-align:middle;line-height:1.4}
+th{font-weight:600;font-size:11px;color:var(--fg3);background:var(--card);word-break:keep-all}
+td.lft{text-align:left;padding-left:6px;word-break:keep-all}
+
+.chk-item{display:flex;align-items:flex-start;gap:9px;padding:10px 2px;border-bottom:1px solid var(--line2);cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.chk-item:last-child{border-bottom:none}
+.chk-box{flex:0 0 20px;width:20px;height:20px;border-radius:5px;border:1.5px solid var(--fg4);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--ink-fg);margin-top:1px}
+.chk-box.on{background:var(--ink);border-color:var(--ink)}
+.chk-txt{font-size:13.5px;line-height:1.5;color:var(--fg2);word-break:keep-all}
+.chk-txt small{display:block;font-size:11.5px;color:var(--fg4);margin-top:1px}
+
+.fm-label{font-size:12px;font-weight:700;color:var(--fg3);margin:14px 0 6px}
+.fm-input{width:100%;padding:10px 11px;font-size:14px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--fg);font-family:inherit}
+.fm-input:focus{outline:none;border-color:var(--ink)}
+.fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+.mail-btn{display:block;width:100%;text-align:center;padding:13px;margin-top:16px;background:var(--ink);color:var(--ink-fg);font-size:14.5px;font-weight:700;border:none;border-radius:10px;text-decoration:none}
+.mail-btn.disabled{background:var(--line);color:var(--fg4);pointer-events:none}
+.mail-hint{font-size:11.5px;color:var(--fg4);text-align:center;margin-top:7px;line-height:1.5;word-break:keep-all}
+
+.contact-card{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:10px;padding:11px 12px;margin-bottom:8px}
+.contact-name{font-size:13.5px;font-weight:700}
+.contact-dept{font-size:11.5px;color:var(--fg4);margin-top:2px}
+.contact-mail{font-size:12px;color:var(--link);font-weight:600;text-decoration:none;white-space:nowrap;margin-left:8px}
+.cal-note{font-size:12px;color:var(--fg4);margin-top:10px;line-height:1.6;word-break:keep-all}
+
+.tl{position:relative;padding-left:20px;margin-top:4px}
+.tl::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl-item{position:relative;padding-bottom:16px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-20px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--line);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--line)}
+.tl-dot.past{background:var(--fg4);box-shadow:0 0 0 1px var(--fg4)}
+.tl-dot.next{background:var(--red);box-shadow:0 0 0 1px var(--red)}
+.tl-date{font-size:11.5px;color:var(--fg4);font-weight:600}
+.tl-txt{font-size:13.5px;color:var(--fg);margin-top:1px;font-weight:600;word-break:keep-all}
+.tl-sub{font-size:12px;color:var(--fg3);margin-top:1px;word-break:keep-all}
+
+.term-card{background:var(--card);border-radius:9px;padding:11px 12px;margin-bottom:9px}
+.term-name{font-size:14.5px;font-weight:700;margin-bottom:4px}
+.term-desc{font-size:12.5px;color:var(--fg2);line-height:1.65;word-break:keep-all}
+.sv-st{font-size:12px;color:var(--fg4);text-align:right;margin-top:2px;height:16px}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="tabbar" id="tabbar"></nav>
+
+  <!-- TAB 1: 안내 -->
+  <section class="pane" id="pane-info">
+    <div class="hd-title">2026-2학기 자격시험 신청 안내</div>
+    <div class="hd-sub">외국어시험·종합시험 신청 정보를 확인하고, [신청서] 탭에서 신청 메일을 준비하세요.</div>
+
+    <div class="pg-row" id="status-cards"></div>
+
+    <div class="notice">📢 자격시험 온라인 신청·응시 시스템을 구축 중입니다. 이번 학기는 기존과 같이 <b>신청서 제출 → 오프라인 응시</b> 방식으로 진행되며, 온라인 신청·응시가 가능해지면 별도 안내됩니다.</div>
+
+    <div class="info-card">
+      <div class="ic-title">📌 신청 방법</div>
+      <div class="ic-row">① 신청 대상 시험·과정 확인 (다음 탭 참고)<br>② 첨부 신청서 양식 작성<br>③ <b>2026. 9. 28.(월)까지</b> 소속학과 메일로 제출</div>
+    </div>
+
+    <div class="hd-sec">제출처</div>
+    <div class="contact-card">
+      <div>
+        <div class="contact-name">대학원 학과 통합 조교</div>
+        <div class="contact-dept">안기정 조교 · anki@gw.global.ac.kr</div>
+      </div>
+      <a class="contact-mail" href="mailto:anki@gw.global.ac.kr">메일 보내기</a>
+    </div>
+
+    <div class="cal-note">
+      ※ 신청서는 정해진 신청기간 내 제출하며, 졸업 전까지 자유롭게 신청할 수 있습니다.<br>
+      ※ 다만 신청하는 학기에 신청서를 제출해야 해당 학기 합격(면제)으로 인정됩니다.<br>
+      ※ 첨부 신청서 양식은 학교 홈페이지 공지사항의 첨부파일을 확인해 주세요.
+    </div>
+  </section>
+
+  <!-- TAB 2: 외국어시험 -->
+  <section class="pane" id="pane-lang">
+    <div class="hd-title">외국어시험</div>
+    <div class="hd-sub">3가지 과정 중 하나를 선택해 진행합니다. 아래에서 해당하는 과정을 눌러 상세 정보를 확인하세요.</div>
+
+    <div class="info-card">
+      <div class="ic-title">✅ 공통 신청자격</div>
+      <div class="ic-row">1학기 이상 이수자로 <b>6학점 이상 취득자</b></div>
+    </div>
+
+    <div class="fm-label">과정 선택</div>
+    <div class="sw-row c3" id="lang-track-sw"></div>
+    <div id="lang-track-detail"></div>
+
+    <div class="hd-sec">공인외국어 성적 기준 (제출일 기준 최근 2년)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>영어</th><th>중국어</th><th>일본어</th></tr></thead>
+        <tbody><tr>
+          <td style="font-size:11px;line-height:1.7">TOEIC 700<br>TOEFL IBT 79<br>TEPS 300<br>IELTS 6.0↑<br>OPIc IM등급</td>
+          <td style="font-size:11px">HSK 5급</td>
+          <td style="font-size:11px;line-height:1.7">JPT 600<br>JLPT 2급</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <div class="fm-label">체크리스트 (자가 점검용)</div>
+    <div class="info-card" style="padding:2px 13px" id="lang-chk-wrap"></div>
+    <div class="sv-st" id="lang-svst"></div>
+  </section>
+
+  <!-- TAB 3: 종합시험 -->
+  <section class="pane" id="pane-comp">
+    <div class="hd-title">종합시험</div>
+    <div class="hd-sub">학과별 전공교과 3과목으로 진행되며, 과목별 재응시가 가능합니다.</div>
+
+    <div class="info-card">
+      <div class="ic-title">✅ 신청자격</div>
+      <div class="ic-row">2학기 이상 이수자로 <b>12학점 이상 취득자</b></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table><tbody>
+        <tr><th style="width:76px">시험일자</th><td class="lft">2026. 11. 21.(토)</td></tr>
+        <tr><th>응시시간</th><td class="lft">과목당 1시간(60분) 또는 과목별 지정 시간</td></tr>
+        <tr><th>시험과목</th><td class="lft">학과별 전공교과 3과목 <span class="bdg bdg-soon">추후공지</span></td></tr>
+        <tr><th>시험장소</th><td class="lft">천안 본교 또는 서울학습관</td></tr>
+        <tr><th>합격기준</th><td class="lft">과목별 100점 만점에 70점 이상</td></tr>
+        <tr><th>결과발표</th><td class="lft">2026. 12. 10.(목) 이후</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="info-card">
+      <div class="ic-title">🔁 신청 구분</div>
+      <div class="ic-row"><b>종합시험 신청</b> : 전공별 3과목 전체 응시<br><b>불합격 과목 신청</b> : 이전에 불합격한 과목만 재응시</div>
+    </div>
+
+    <div class="info-card warn">
+      <div class="ic-title">💳 응시료 안내</div>
+      <div class="ic-row">수업연한(4학기)을 초과한 경우, 과목당 <b>20,000원</b>의 응시료를 납부해야 합니다.</div>
+    </div>
+
+    <div class="fm-label">체크리스트 (자가 점검용)</div>
+    <div class="info-card" style="padding:2px 13px" id="comp-chk-wrap"></div>
+    <div class="sv-st" id="comp-svst"></div>
+  </section>
+
+  <!-- TAB 4: 신청서 -->
+  <section class="pane" id="pane-apply">
+    <div class="hd-title">신청서 작성</div>
+    <div class="hd-sub">아래 정보를 입력하면 제출 메일이 자동으로 작성됩니다. 첨부파일은 메일 앱에서 직접 추가해 주세요.</div>
+
+    <div class="fm-grid">
+      <div><div class="fm-label">이름</div><input class="fm-input" id="ap-name" type="text" placeholder="예: 홍길동" autocomplete="off"></div>
+      <div><div class="fm-label">학번</div><input class="fm-input" id="ap-id" type="text" inputmode="numeric" placeholder="예: 2025000000" autocomplete="off"></div>
+    </div>
+
+    <div class="fm-label">소속 학과</div>
+    <input class="fm-input" id="ap-dept" type="text" placeholder="예: 동양학과" autocomplete="off">
+
+    <div class="fm-label">신청 시험</div>
+    <div class="sw-row c2" id="ap-exam-sw"></div>
+
+    <div id="ap-track-wrap"></div>
+
+    <div class="fm-label">신청 구분</div>
+    <div class="sw-row" id="ap-kind-sw"></div>
+
+    <div class="fm-label">제출 서류 체크</div>
+    <div class="info-card" style="padding:2px 13px" id="ap-doc-wrap"></div>
+
+    <a class="mail-btn disabled" id="ap-mail-btn" href="#">신청 메일 작성하기</a>
+    <div class="mail-hint" id="ap-mail-hint"></div>
+  </section>
+
+  <!-- TAB 5: 일정·용어 -->
+  <section class="pane" id="pane-cal">
+    <div class="hd-title">주요 일정 &amp; 용어설명</div>
+    <div class="hd-sub">2026-2학기 자격시험 관련 주요 일정입니다.</div>
+
+    <div class="tl" id="timeline"></div>
+
+    <div class="hd-sec" style="margin-top:22px">용어설명</div>
+    <div class="term-card">
+      <div class="term-name">수업연한</div>
+      <div class="term-desc">정규 학기 기준 졸업까지 인정되는 표준 이수 기간(4학기)을 말합니다. 이를 초과해 재학 중인 경우 시험 응시료가 부과됩니다(외국어시험 30,000원, 종합시험 과목당 20,000원).</div>
+    </div>
+    <div class="term-card">
+      <div class="term-name">면제 과정</div>
+      <div class="term-desc">외국어시험을 직접 응시하지 않고, 지정 대체과목 이수 또는 공인외국어 성적 제출로 합격을 인정받는 절차입니다.</div>
+    </div>
+    <div class="term-card">
+      <div class="term-name">합격(면제) 인정 학기</div>
+      <div class="term-desc">신청서를 제출한 학기에만 해당 학기 합격(면제)으로 인정됩니다. 예를 들어 대체과목을 2학기에 이수했다면, 이수증은 다음 학기에 제출해야 합격으로 인정됩니다. 외국어시험 과정은 신청한 학기에 반드시 응시해야 합니다.</div>
+    </div>
+    <div class="term-card">
+      <div class="term-name">과목별 재응시</div>
+      <div class="term-desc">종합시험 3과목 중 일부 과목만 불합격한 경우, 신청서의 '불합격 과목 신청'으로 해당 과목만 다시 응시할 수 있는 제도입니다.</div>
+    </div>
+
+    <div class="cal-note">※ 위 일정은 안내문 기준이며, 학사 사정에 따라 변경될 수 있습니다. 최신 공지는 학교 홈페이지를 확인해 주세요.</div>
+  </section>
+
+</div>
+
+<script>
+/* ============ 저장소: localStorage (실패 시 메모리 폴백) ============ */
+const memStore={};
+function stGet(key){
+  try{const v=localStorage.getItem(key);if(v)return JSON.parse(v);}catch(e){}
+  return memStore[key]!==undefined?memStore[key]:null;
+}
+function stSet(key,val){
+  memStore[key]=val;
+  try{localStorage.setItem(key,JSON.stringify(val));}catch(e){}
+}
+
+/* ============ 탭 ============ */
+const TABS=[
+  {id:'info',label:'안내'},{id:'lang',label:'외국어\n시험'},{id:'comp',label:'종합\n시험'},
+  {id:'apply',label:'신청서'},{id:'cal',label:'일정·용어'}
+];
+function switchTab(id){
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===id));
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id==='pane-'+id));
+  window.scrollTo(0,0);
+}
+document.getElementById('tabbar').innerHTML=TABS.map(t=>
+  `<button class="tabbtn" data-tab="${t.id}">${t.label.replace('\n','<br>')}</button>`).join('');
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+switchTab('info');
+
+/* ============ 날짜 데이터 (2026-2학기) ============ */
+const D={
+  applyEnd:'2026-09-28',
+  altCertStart:'2026-11-03', altCertEnd:'2026-11-13',
+  langExam:'2026-11-14', compExam:'2026-11-21',
+  result:'2026-12-10'
+};
+const TODAY=new Date();TODAY.setHours(0,0,0,0);
+function pd(s){const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
+function md(s){return s.slice(5).replace('-','.')+'.';}
+function ddayLabel(s){
+  const diff=Math.round((pd(s)-TODAY)/86400000);
+  if(diff>0)return {text:'D-'+diff,cls:'dday'};
+  if(diff===0)return {text:'D-DAY',cls:'dday'};
+  return {text:'종료',cls:'done'};
+}
+
+/* ============ TAB1: 상태 카드 ============ */
+document.getElementById('status-cards').innerHTML=[
+  {name:'신청 마감',date:D.applyEnd},{name:'외국어시험일',date:D.langExam},{name:'종합시험일',date:D.compExam}
+].map(it=>{const dd=ddayLabel(it.date);
+  return `<div class="pg-card"><div class="pg-name">${it.name}</div><div class="pg-num ${dd.cls}">${dd.text}</div><div class="pg-sub">${md(it.date)}</div></div>`;}).join('');
+
+/* ============ TAB2: 외국어시험 과정 ============ */
+const LANG_TRACKS=[
+  {id:'exam',label:'외국어시험\n과정',
+   html:`<div class="info-card">
+      <div class="ic-title">📝 외국어시험 과정</div>
+      <div class="ic-row">신청 시 해당 학기에 <b>반드시 응시</b>해야 하며, 수업연한(4학기) 초과자는 응시료 <b>30,000원</b>을 납부합니다.</div>
+    </div>
+    <div class="tbl-wrap"><table>
+      <tr><th style="width:70px">시험일자</th><td class="lft">2026. 11. 14.(토)</td></tr>
+      <tr><th>응시시간</th><td class="lft">1시간(60분)</td></tr>
+      <tr><th>시험범위</th><td class="lft">홈페이지 로그인 &gt; 마이페이지 &gt; 학습자료실 &gt; '자격시험(외국어시험) 범위 배포' 첨부파일 확인</td></tr>
+      <tr><th>시험장소</th><td class="lft">천안 본교 또는 서울학습관</td></tr>
+      <tr><th>합격기준</th><td class="lft">100점 만점에 70점 이상</td></tr>
+      <tr><th>결과발표</th><td class="lft">2026. 12. 10.(목) 이후</td></tr>
+    </table></div>`},
+  {id:'alt',label:'대체과목\n과정',
+   html:`<div class="info-card">
+      <div class="ic-title">🎓 대체과목 과정</div>
+      <div class="ic-row">평생교육원 <b>[글로벌사이버대학교 대학원 외국어시험 대체과목] Call of Sedona</b> 과정을 이수한 경우 면제됩니다.</div>
+    </div>
+    <div class="tbl-wrap"><table>
+      <tr><th style="width:70px">제출기간</th><td class="lft">2026. 11. 3.(화) ~ 11. 13.(금)</td></tr>
+      <tr><th>제출서류</th><td class="lft">① 외국어시험 면제 신청서 1부<br>② 평생교육원 수료증 또는 이수증 1부</td></tr>
+      <tr><th>제출처</th><td class="lft">소속학과 메일 (안기정 조교)</td></tr>
+      <tr><th>결과발표</th><td class="lft">2026. 12. 10.(목) 이후</td></tr>
+    </table></div>`},
+  {id:'cert',label:'공인외국어\n성적 과정',
+   html:`<div class="info-card">
+      <div class="ic-title">📄 공인외국어성적 과정</div>
+      <div class="ic-row">제출일 기준 최근 2년 이내 취득한 공인 성적으로 면제받는 과정입니다. 하단 기준표를 확인하세요.</div>
+    </div>
+    <div class="tbl-wrap"><table>
+      <tr><th style="width:70px">제출기간</th><td class="lft">2026. 11. 3.(화) ~ 11. 13.(금)</td></tr>
+      <tr><th>제출서류</th><td class="lft">① 외국어시험 면제 신청서 1부<br>② 공인외국어 성적증명서 1부</td></tr>
+      <tr><th>제출처</th><td class="lft">소속학과 메일 (안기정 조교)</td></tr>
+      <tr><th>결과발표</th><td class="lft">2026. 12. 10.(목) 이후</td></tr>
+    </table></div>`}
+];
+let langTrack='exam';
+function renderLang(){
+  document.getElementById('lang-track-sw').innerHTML=LANG_TRACKS.map(t=>
+    `<button class="sw-btn${t.id===langTrack?' on':''}" data-id="${t.id}">${t.label.replace('\n','<br>')}</button>`).join('');
+  document.querySelectorAll('#lang-track-sw .sw-btn').forEach(b=>b.addEventListener('click',()=>{langTrack=b.dataset.id;renderLang();}));
+  document.getElementById('lang-track-detail').innerHTML=LANG_TRACKS.find(t=>t.id===langTrack).html;
+}
+renderLang();
+
+/* ============ 체크리스트 ============ */
+function buildChecklist(wrapId,key,items,svstId){
+  const wrap=document.getElementById(wrapId);
+  let state=stGet(key)||{};
+  function render(){
+    wrap.innerHTML=items.map((txt,i)=>{const on=!!state[i];const p=txt.split('|');
+      return `<div class="chk-item" data-i="${i}"><div class="chk-box${on?' on':''}">${on?'✓':''}</div><div class="chk-txt">${p[0]}${p[1]?`<small>${p[1]}</small>`:''}</div></div>`;}).join('');
+    wrap.querySelectorAll('.chk-item').forEach(el=>el.addEventListener('click',()=>{
+      state[el.dataset.i]=!state[el.dataset.i];render();stSet(key,state);
+      const s=document.getElementById(svstId);s.textContent='저장됨 ✓';clearTimeout(s._t);s._t=setTimeout(()=>s.textContent='',1500);
+    }));
+  }
+  render();
+}
+buildChecklist('lang-chk-wrap','lang-chk-2026-2',[
+  '1학기 이상 이수했다|재학 학기 기준','6학점 이상 취득했다',
+  '진행할 과정을 정했다(외국어시험 / 대체과목 / 공인성적)',
+  '신청서를 9월 28일(월)까지 제출했다',
+  '대체과목·공인성적 과정이면 11월 3일~13일 증빙서류 제출 일정을 확인했다'
+],'lang-svst');
+buildChecklist('comp-chk-wrap','comp-chk-2026-2',[
+  '2학기 이상 이수했다','12학점 이상 취득했다',
+  '신청 구분을 정했다(3과목 전체 / 불합격 과목)',
+  '학과별 전공교과 3과목 공지를 확인했다',
+  '신청서를 9월 28일(월)까지 제출했다'
+],'comp-svst');
+
+/* ============ TAB4: 신청서 작성 ============ */
+const CONTACT={name:'안기정 조교',mail:'anki@gw.global.ac.kr'};
+const EXAMS=[{id:'lang',name:'외국어시험'},{id:'comp',name:'종합시험'}];
+const KINDS={lang:['신청','변경','취소'],comp:['종합시험 신청(3과목)','불합격 과목 신청']};
+let apExam='lang',apTrack='exam',apKind=0,apDocState={};
+const AP_DOC_MAP={
+  lang:{exam:['자격시험(외국어시험) 신청서 1부'],
+        alt:['자격시험(외국어시험) 신청서 1부','(11.3~11.13 제출) 외국어시험 면제 신청서 1부','(11.3~11.13 제출) 평생교육원 수료증 또는 이수증 1부'],
+        cert:['자격시험(외국어시험) 신청서 1부','(11.3~11.13 제출) 외국어시험 면제 신청서 1부','(11.3~11.13 제출) 공인외국어 성적증명서 1부']},
+  comp:['자격시험(종합시험) 신청서 1부']
+};
+function swHTML(list,cur){return list.map((t,i)=>`<button class="sw-btn${cur===i?' on':''}" data-i="${i}">${t.replace('\n','<br>')}</button>`).join('');}
+function renderApExam(){
+  const el=document.getElementById('ap-exam-sw');
+  el.innerHTML=EXAMS.map(e=>`<button class="sw-btn${apExam===e.id?' on':''}" data-id="${e.id}">${e.name}</button>`).join('');
+  el.querySelectorAll('.sw-btn').forEach(b=>b.addEventListener('click',()=>{apExam=b.dataset.id;apKind=0;renderAll();}));
+}
+function renderApTrack(){
+  const wrap=document.getElementById('ap-track-wrap');
+  if(apExam!=='lang'){wrap.innerHTML='';return;}
+  wrap.innerHTML=`<div class="fm-label">외국어시험 과정</div><div class="sw-row c3" id="ap-track-sw"></div>`;
+  const el=document.getElementById('ap-track-sw');
+  el.innerHTML=LANG_TRACKS.map(t=>`<button class="sw-btn${apTrack===t.id?' on':''}" data-id="${t.id}">${t.label.replace('\n','<br>')}</button>`).join('');
+  el.querySelectorAll('.sw-btn').forEach(b=>b.addEventListener('click',()=>{apTrack=b.dataset.id;renderAll();}));
+}
+function renderApKind(){
+  const el=document.getElementById('ap-kind-sw');
+  const list=KINDS[apExam];
+  el.className='sw-row '+(list.length===3?'c3':'c2');
+  el.innerHTML=swHTML(list,apKind);
+  el.querySelectorAll('.sw-btn').forEach(b=>b.addEventListener('click',()=>{apKind=+b.dataset.i;renderApKind();renderMail();}));
+}
+function currentDocs(){return apExam==='lang'?AP_DOC_MAP.lang[apTrack]:AP_DOC_MAP.comp;}
+function renderApDocs(){
+  const wrap=document.getElementById('ap-doc-wrap');
+  wrap.innerHTML=currentDocs().map(txt=>{const on=!!apDocState[txt];
+    return `<div class="chk-item" data-txt="${encodeURIComponent(txt)}"><div class="chk-box${on?' on':''}">${on?'✓':''}</div><div class="chk-txt">${txt}</div></div>`;}).join('');
+  wrap.querySelectorAll('.chk-item').forEach(el=>el.addEventListener('click',()=>{
+    const t=decodeURIComponent(el.dataset.txt);apDocState[t]=!apDocState[t];renderApDocs();}));
+}
+function renderMail(){
+  const name=document.getElementById('ap-name').value.trim();
+  const sid=document.getElementById('ap-id').value.trim();
+  const dept=document.getElementById('ap-dept').value.trim();
+  const btn=document.getElementById('ap-mail-btn'),hint=document.getElementById('ap-mail-hint');
+  if(!name||!dept){btn.classList.add('disabled');btn.href='#';hint.textContent='이름과 소속 학과를 입력하면 활성화됩니다.';return;}
+  btn.classList.remove('disabled');
+  const exam=EXAMS.find(e=>e.id===apExam).name;
+  const track=apExam==='lang'?' - '+LANG_TRACKS.find(t=>t.id===apTrack).label.replace('\n',' '):'';
+  const kind=KINDS[apExam][apKind];
+  const docs=currentDocs().filter(d=>!d.startsWith('(11.'));
+  const subject=`[${dept}] 2026-2학기 자격시험(${exam}) 신청서 제출 - ${name}`;
+  const body=[
+    `${CONTACT.name}님, 안녕하세요.`,
+    `${dept} ${name}${sid?'('+sid+')':''}입니다.`,'',
+    `2026-2학기 자격시험을 아래와 같이 신청하고자 신청서를 첨부하여 보내드립니다.`,'',
+    `- 신청 시험: ${exam}${track}`,
+    `- 신청 구분: ${kind}`,
+    `- 제출 서류: ${docs.join(', ')}`,'',
+    `※ 첨부파일: (메일 앱에서 신청서 파일을 첨부해 주세요)`,'',
+    `감사합니다.`,`${name} 드림`
+  ].join('\n');
+  btn.href=`mailto:${CONTACT.mail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  hint.textContent=`${CONTACT.mail} 로 메일이 작성됩니다. 신청서 파일 첨부를 잊지 마세요.`+
+    (apExam==='lang'&&apTrack!=='exam'?' 면제 증빙서류는 11.3.~11.13. 기간에 별도 제출합니다.':'');
+}
+function renderAll(){renderApExam();renderApTrack();renderApKind();renderApDocs();renderMail();}
+['ap-name','ap-id','ap-dept'].forEach(id=>document.getElementById(id).addEventListener('input',renderMail));
+renderAll();
+
+/* ============ TAB5: 타임라인 ============ */
+(function(){
+  const items=[
+    {date:D.applyEnd,txt:'신청 마감',sub:'신청서 소속학과 메일 제출 마감'},
+    {date:D.altCertStart,txt:'대체과목·공인성적 서류 제출 시작',sub:md(D.altCertStart)+' ~ '+md(D.altCertEnd)},
+    {date:D.altCertEnd,txt:'대체과목·공인성적 서류 제출 마감'},
+    {date:D.langExam,txt:'외국어시험 시행일',sub:'1시간(60분) · 천안 본교 또는 서울학습관'},
+    {date:D.compExam,txt:'종합시험 시행일',sub:'과목당 1시간(60분) · 천안 본교 또는 서울학습관'},
+    {date:D.result,txt:'합격·면제 여부 공개',sub:'외국어시험(면제 포함)·종합시험 결과 12.10.(목) 이후'}
+  ];
+  const up=items.find(it=>pd(it.date)>=TODAY);
+  document.getElementById('timeline').innerHTML=items.map(it=>{
+    const cls=(up&&it===up)?'next':(pd(it.date)<TODAY?'past':'');
+    return `<div class="tl-item"><div class="tl-dot ${cls}"></div><div class="tl-date">${md(it.date)}</div><div class="tl-txt">${it.txt}</div>${it.sub?`<div class="tl-sub">${it.sub}</div>`:''}</div>`;
+  }).join('');
+})();
+</script>
+</body></html>
